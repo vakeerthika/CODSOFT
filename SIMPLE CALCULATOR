@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num1,num2;
+    char oper;
+    cout<<"Enter two integer values : ";
+    cin>>num1>>num2;
+    cout<<"Enter an arithmetic operator : ";
+    cin>>oper;
+    switch(oper)
+    {
+        case '+':
+        {
+            cout<<"Addition :"<<'\t'<<num1+num2;
+            break;
+        }
+        case '-':
+      {
+        cout<<"subtraction :"<<'\t'<<num1-num2;
+        break;
+      }
+    case '*':
+      {
+        cout<<"Multiplication :"<<'\t'<<num1*num2;
+        break;
+      }
+      case '/':
+     { if(num2!=0)
+      {
+        cout<<"Division :"<<'\t'<<num1%num2;
+        break;
+      }
+        else{
+            cout<<"Error by zero";
+        }
+     }
+     default:{
+         cout<<"Enter valid operator";
+     }
+    }
+    return 0;
+}
+OUTPUT:
+
+      Enter two integer values : 5 7
+      Enter an arithmetic operator : +
+      Addition :	12
