@@ -1,0 +1,38 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+void guessNumber()
+{
+    srand(time(0));
+    int guess = rand()%100+1;
+ int num;
+ while (num!=guess) {
+    cout<<"Enter your guess:";
+cin>>num;
+if(num<guess)
+{
+    cout<<"The number is small ! Try Again "<<endl;
+    
+}
+    else if(num>guess){
+        cout<<"The number is large ! Try Again "<<endl;
+    }
+else
+{
+    cout<<"Great !You have guessed correct number."<<endl;
+}
+     }
+}
+int main()
+{ guessNumber();
+return 0;
+}
+
+Output:
+Enter your guess:49
+The number is small ! Try Again 
+Enter your guess:66
+The number is large ! Try Again 
+Enter your guess:53
+Great !You have guessed correct number.
